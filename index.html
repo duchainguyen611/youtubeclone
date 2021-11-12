@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- navbar -->
+    <div id="navbar">
+        <div class="nav-left">
+            <i class="bi bi-list" onclick="onSideNav()"></i>
+            <div class="logo">
+                <img src="./img/YouTube_Logo_2017.svg.png" alt="">
+            </div>
+            <span>VN</span>
+        </div>
+        <div class="nav-mid">
+            <form action="" style="display: flex; align-items: center;">
+                <div class="input" id="input">
+                    <input type="text" placeholder="Tìm kiếm" id="text-input">
+                    <span class="material-icons">
+                        keyboard
+                    </span>
+                </div>
+                <button type="submit" class="icon5"><i class="bi bi-search"></i></i></button>
+                <div class="effect5">
+                  <span>Tìm kiếm</span>
+                </div>
+            </form>
+            <div class="mic icon4">
+              <span class="material-icons">mic</span>
+              <div class="effect4">
+                <span>Tìm kiếm bằng giọng nói</span>
+              </div>
+            </div>
+        </div>
+        <div class="nav-right">
+            <div class="icon1">
+              <span class="material-icons-outlined ">video_call</span>
+              <div class="effect1">
+                <span>Tạo</span>
+              </div>
+            </div>
+            <div class="icon2">
+              <i class="bi bi-grid-3x3-gap"></i>
+              <div class="effect2">
+                <span>Các ứng dụng YouTube</span>
+              </div>
+            </div>
+            <div class="icon3">
+              <i class="bi bi-bell"></i>
+              <div class="effect3">
+                <span>Thông báo</span>
+              </div>
+            </div>
+            <div class="avt" id="avt"><img src="./img/avt.png" alt=""></div>
+        </div>
+        <div class="avt-content" id="avt-content">
+          <div class="head-avt">
+            <div class="img-avt">
+              <img src="./img/avt.png" alt="">
+            </div>
+            <div class="name-avt">
+              <p>Hải Đức</p>
+              <span>Quản lý Tài khoản Google của bạn</span>
+            </div>
+          </div>
+          <hr>
+          <div class="list-avt">
+            <div>
+              <i class="bi bi-person-square"></i>
+              <p>Kênh của bạn</p>
+            </div>
+            <div>
+              <i class="bi bi-coin"></i>
+              <p>Giao dịch mua và gói thành viên</p>
+            </div>
+            <div>
+              <span class="material-icons-outlined">
+                settings
+                </span>
+                <p>YouTube Studio</p>
+            </div>
+            <div>
+              <span class="material-icons-outlined">
+                switch_account
+                </span>
+                <p>Chuyển đổi tài khoản</p>
+                <i class="bi bi-chevron-right phai"></i>
+            </div>
+            <div>
+              <span class="material-icons-outlined">
+                login
+                </span>
+                <p>Đăng xuất</p>
+            </div>
+            <hr>
+            <div>
+              <i class="bi bi-moon"></i>
+              <p>Giao diện: Sáng</p>
+              <i class="bi bi-chevron-right phai"></i>
+            </div>
+            <div>
+              <span class="material-icons-outlined">
+                translate
+                </span>
+                <p>Ngôn ngữ: Tiếng Việt</p>
+                <i class="bi bi-chevron-right phai"></i>
+            </div>
+            <div>
+              <span class="material-icons-outlined">
+                language
+                </span>
+                <p>Địa điểm: Việt Nam</p>
+                <i class="bi bi-chevron-right phai"></i>
+            </div>
+            <div>
+              <span class="material-icons-outlined">
+                manage_accounts
+                </span>
+                <p>Cài đặt</p>
+            </div>
+            <div>
+              <span class="material-icons-outlined">
+                admin_panel_settings
+                </span>
+                <p>Dữ liệu của bạn trong YouTube</p>
+            </div>
+            <div>
+              <i class="bi bi-question-circle"></i>
+              <p>Trợ giúp</p>
+            </div>
+            <div>
+              <span class="material-icons-outlined">
+                feedback
+                </span>
+              <p>Gửi phản hồi</p>
+            </div>
+            <div>
+              <span class="material-icons-outlined">
+                keyboard
+                </span>
+                <p>Phím tắt</p>
+            </div>
+            <hr>
+            <div>
+              <p>Chế độ hạn chế: Đã tắt</p>
+              <i class="bi bi-chevron-right phai"></i>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div id ="left-list">
+        <div>
+            <i class="bi bi-house-door-fill" style="margin-bottom: 6px;"></i>
+            <p>Trang chủ</p>
+        </div>
+        <div>
+            <i class="bi bi-compass" style="margin-bottom: 6px ;"></i>
+            <p>Khám phá</p>
+        </div>
+        <div>
+            <i class="bi bi-collection-play" style="margin-bottom: 6px ;"></i>
+            <p>Kênh đăng ký</p>
+        </div>
+        <div>
+            <span class="material-icons-outlined" style="margin-bottom: 6px ;">
+                video_library
+            </span>
+            <p>Thư viện</p>
+        </div>
+    </div>
+    <!-- sideNav -->
+    <div id="sideNav">
+      <div id="content-sideNav">
+        <div class="nav-left">
+          <i class="bi bi-list" onclick="offSideNav()"></i>
+          <div class="logo">
+              <img src="./img/YouTube_Logo_2017.svg.png" alt="">
+          </div>
+          <span>VN</span>
+        </div>
+        <div class="list-sideNav">
+          <div>
+              <i class="bi bi-house-door-fill" style="margin-bottom: 6px;"></i>
+              <p>Trang chủ</p>
+          </div>
+          <div>
+              <i class="bi bi-compass" style="margin-bottom: 6px ;"></i>
+              <p>Khám phá</p>
+          </div>
+          <div>
+              <i class="bi bi-collection-play" style="margin-bottom: 6px ;"></i>
+              <p>Kênh đăng ký</p>
+          </div>
+          <hr >
+          <div>
+              <span class="material-icons-outlined" style="margin-bottom: 6px ;">
+                  video_library
+              </span>
+              <p>Thư viện</p>
+          </div>
+          <div>
+            <span class="material-icons-outlined">
+              restore
+              </span>
+            <p>Video đã xem</p>
+          </div>
+          <div>
+            <i class="bi bi-play-btn"></i>
+            <p>Video của bạn</p>
+          </div>
+          <div>
+            <i class="bi bi-clock"></i>
+            <p>Xem sau</p>
+          </div>
+          <div>
+            <i class="bi bi-chevron-down"></i>
+            <p>Xem thêm</p>
+          </div>
+          <hr>
+          <p class="title-sideNav">Kênh đăng ký</p>
+          <div>
+            <img src="https://yt3.ggpht.com/ytc/AKedOLRdMeUndRVWyCq1zRfgKtJM9CfCwczo-rmxG20eRQ=s88-c-k-c0x00ffffff-no-rj" alt="">
+            <p>Hà Tiều Phu</p>
+          </div>
+          <div>
+            <img src="https://yt3.ggpht.com/ytc/AKedOLTFLnUPOScnD78_Lz7YCbp0PXSpPgBTI4HA0pA8=s88-c-k-c0x00ffffff-no-rj" alt="">
+            <p>Joma Tech</p>
+          </div>
+          <div>
+            <img src="https://yt3.ggpht.com/ytc/AKedOLQUTCVb5f5qA8l-tqhkkOI_I4zJQ2Wu-6wTUyJTYg=s88-c-k-c0x00ffffff-no-rj" alt="">
+            <p>Sơn Tùng M-TP O...</p>
+          </div>
+          <div>
+            <img src="https://yt3.ggpht.com/ytc/AKedOLTluWRqX-5YLlD_JhgfKkYx_8p5H2p1LBwMBUPH=s88-c-k-c0x00ffffff-no-rj" alt="">
+            <p>VETV7 ESPORTS</p>
+          </div>
+          <div>
+            <img src="https://yt3.ggpht.com/vxj4MtCwT17lzhjtB2wDOYr_7_0bwWa9ukHSCy-rILp9c9rDMSs6rd2hZti4pbj2vAAf-4XKqg=s88-c-k-c0x00ffffff-no-rj" alt="">
+            <p>Ba Rọi Béo</p>
+          </div>
+          <div>
+            <i class="bi bi-chevron-down"></i>
+            <p>Hiển thị thêm 133 mục</p>
+          </div>
+          <hr>
+          <p class="title-sideNav">Dịch vụ khác của YouTube</p>
+          <div>
+            <i class="bi bi-controller"></i>
+            <p>Trò chơi</p>
+          </div>
+          <div>
+            <i class="bi bi-broadcast"></i>
+            <p>Sự kiện trực tiếp</p>
+          </div>
+          <div>
+            <i class="bi bi-trophy"></i>
+            <p>Thể thao</p>
+          </div>
+          <hr>
+          <div>
+            <span class="material-icons-outlined">
+              settings
+              </span>
+            <p>Cài đặt</p>
+          </div>
+          <div>
+            <i class="bi bi-flag"></i>
+            <p>Lịch sử báo cáo</p>
+          </div>
+          <div>
+            <i class="bi bi-question-circle"></i>
+            <p>Trợ giúp</p>
+          </div>
+          <div>
+            <span class="material-icons-outlined">
+              feedback
+              </span>
+            <p>Gửi phản hồi</p>
+          </div>
+          <hr>
+          <p style="padding: 0 24px;">
+            <a href="">Giới thiệu</a>
+            <a href="">Báo chí</a>
+            <a href="">Bản quyền</a>
+            <a href="">Liên hệ với chúng tôi</a>
+            <a href="">Người sáng tạo</a>
+            <a href="">Quảng cáo</a>
+            <a href="">Nhà phát triển</a>
+            <br> <br>
+            <a href="">Điều khoản</a>
+            <a href="">Quyền riêng tư</a>
+            <a href="">Chính sách và an toàn</a>
+            <a href="">Cách YouTube hoạt động</a>
+            <a href="">Thử các tính năng mới</a>
+          </p> 
+          <br>
+          <small>© 2021 Google LLC</small>
+        </div>
+      </div>
+    </div>
+    <!-- tablist -->
+    <div id="tablist">
+        <button class="tablist-option action">Tất cả</button>
+        <button class="tablist-option ">Danh sách kết hợp</button>
+        <button class="tablist-option ">Âm nhạc</button>
+        <button class="tablist-option ">Đọc rap</button>
+        <button class="tablist-option ">Hoạt hình</button>
+        <button class="tablist-option ">Trực tiếp</button>            
+        <button class="tablist-option ">Chương trình nấu ăn</button>
+        <button class="tablist-option ">Làm đẹp</button>
+        <button class="tablist-option ">Bóng đá</button>
+        <button class="tablist-option ">Trò chơi hành động phiêu lưu</button>
+        <button class="tablist-option ">Mới tải lên gần đây</button>
+        <button class="tablist-option ">Đã xem</button>
+        <button class="tablist-option ">Đề xuất mới</button>
+    </div>
+
+    <!-- video -->
+    <div id="list-video">
+        <div class="row">
+            <div class="card" style="width: 18rem;">
+                <img src="https://i.ytimg.com/vi/J7eYhM6wXPo/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBPGxX_1C-Eh7csKqJc0agyP8mPmg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <div class="image-vid">
+                        <img src="https://yt3.ggpht.com/ytc/AKedOLS2bZ4KYqlRc4wuPw92uGi9_okJYI7b_9hJCqcz=s88-c-k-c0x00ffffff-no-rj-mo" alt="">
+                    </div>
+                    <p class="card-text">An Thần (ft. Thắng) | Low G | Rap Nhà Làm
+                        <br>
+                        <span>Rap Nhà Làm</span> <br>
+                        <small>5,4&nbsp;Tr lượt xem • 2 tuần trước</small>
+                    </p>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="https://i.ytimg.com/vi/xypzmu5mMPY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA-xo4-kATi9sfc2cMgV_7fSQ7_MQ" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <div class="image-vid">
+                        <img src="https://yt3.ggpht.com/ytc/AKedOLQUTCVb5f5qA8l-tqhkkOI_I4zJQ2Wu-6wTUyJTYg=s176-c-k-c0x00ffffff-no-rj-mo" alt="">
+                    </div>
+                    <p class="card-text">SƠN TÙNG M-TP | MUỘN RỒI MÀ SAO CÒN | OFFICIAL ...
+                        <br>
+                        <span>Sơn Tùng M-TP Official <i class="bi bi-music-note"></i></span> <br>
+                        <small>136&nbsp;Tr lượt xem • 6 tháng trước</small>
+                    </p>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="https://i.ytimg.com/vi/V0e2cgpOrJQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAHb6Xk6HrAqGALYJ7hcEn1PGSyBA" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <div class="image-vid">
+                        <img src="https://yt3.ggpht.com/ytc/AKedOLS2-XgLwjSZ_I2PH0kse_-XzO_0O3NluqrFsXCm=s176-c-k-c0x00ffffff-no-rj" alt="">
+                    </div>
+                  <p class="card-text">JustaTee - Bâng Khuâng [ OFFICIAL MV ]
+                    <br>
+                    <span>SpaceSpeakers</span> <br>
+                    <small>29&nbsp;Tr lượt xem • 7 năm trước</small>
+                  </p>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="https://i.ytimg.com/vi/psZ1g9fMfeo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBZYF1jk3LB2C-sUTidfVXZKkBQiQ" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <div class="image-vid">
+                        <img src="https://yt3.ggpht.com/ytc/AKedOLQUTCVb5f5qA8l-tqhkkOI_I4zJQ2Wu-6wTUyJTYg=s176-c-k-c0x00ffffff-no-rj-mo" alt="">
+                    </div>
+                  <p class="card-text">SƠN TÙNG M-TP | CHÚNG TA CỦA HIỆN TẠI | OFFICIAL ...
+                    <br>
+                    <span>Sơn Tùng M-TP Official <i class="bi bi-music-note"></i></span> <br>
+                    <small>87&nbsp;Tr lượt xem • 10 tuần trước</small>
+                  </p>
+                </div>
+              </div>
+            <div class="card" style="width: 18rem;">
+                <img src="https://i.ytimg.com/vi/Llw9Q6akRo4/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBhZrAW0s1edniVJsk7avNRccrLig" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <div class="image-vid">
+                        <img src="https://yt3.ggpht.com/ytc/AKedOLQUTCVb5f5qA8l-tqhkkOI_I4zJQ2Wu-6wTUyJTYg=s176-c-k-c0x00ffffff-no-rj-mo" alt="">
+                    </div>
+                    <p class="card-text">LẠC TRÔI | OFFICIAL MUSIC VIDEO | SƠN TÙNG M-TP
+                        <br>
+                        <span>Sơn Tùng M-TP Official <i class="bi bi-music-note"></i></span> <br>
+                        <small>244&nbsp;Tr lượt xem • 4 năm trước</small>
+                    </p>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="https://i.ytimg.com/vi/6i41YbU4QuA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBdZQjR-ms92YYU2TSIxzW8aPsdhg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <div class="image-vid">
+                        <img src="https://yt3.ggpht.com/ytc/AKedOLRDsRG2bkzWp7OWSi7odDoO4vkzyLF2lIvml5xCxA=s88-c-k-c0x00ffffff-no-rj" alt="">
+                    </div>
+                  <p class="card-text">Một Bước Yêu Vạn Dặm Đau | Mr.Siro | Piano Version
+                    <br>
+                    <span>Mr. Siro</span> <br>
+                    <small>6,9&nbsp;Tr lượt xem • 2 năm trước</small>
+                  </p>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="https://i.ytimg.com/vi/FN7ALfpGxiI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDwwxu3h8KvIrNUs7C6MRJCZfjwiA" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <div class="image-vid">
+                        <img src="https://yt3.ggpht.com/ytc/AKedOLQUTCVb5f5qA8l-tqhkkOI_I4zJQ2Wu-6wTUyJTYg=s176-c-k-c0x00ffffff-no-rj-mo" alt="">
+                    </div>
+                  <p class="card-text">NƠI NÀY CÓ ANH | OFFICIAL MUSIC VIDEO | SƠN TÙNG...
+                    <br>
+                    <span>Sơn Tùng M-TP Official <i class="bi bi-music-note"></i></span> <br>
+                    <small>286&nbsp;Tr lượt xem • 4 năm trước</small>
+                  </p>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="https://i.ytimg.com/vi/6t-MjBazs3o/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBlJGS1LBx1hmQ-wojU3d7rbOEJ1Q" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <div class="image-vid">
+                        <img src="https://yt3.ggpht.com/ytc/AKedOLQUTCVb5f5qA8l-tqhkkOI_I4zJQ2Wu-6wTUyJTYg=s176-c-k-c0x00ffffff-no-rj-mo" alt="">
+                    </div>
+                  <p class="card-text">SƠN TÙNG M-TP | CÓ CHẮC YÊU LÀ ĐÂY | OFFICIAL MUS...
+                    <br>
+                    <span>Sơn Tùng M-TP Official <i class="bi bi-music-note"></i></span> <br>
+                    <small>142&nbsp;Tr lượt xem • 1 năm trước</small>
+                  </p>
+                </div>
+              </div>
+            <div class="card" style="width: 18rem;">
+                <img src="https://i.ytimg.com/vi/tQ0yjYUFKAE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAWQQm4MXhv7hMWuesqAm1qbXCC_w" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <div class="image-vid">
+                        <img src="https://yt3.ggpht.com/ytc/AKedOLTX8Xi-Ygw1DkhWGiS9-_ZR3yomzlJWDfxPshrpnQ=s88-c-k-c0x00ffffff-no-rj" alt="">
+                    </div>
+                    <p class="card-text">Justin Bieber - Peaches ft. Daniel Caesar, Giveon
+                        <br>
+                        <span>Justin Bieber</span> <br>
+                        <small>419&nbsp;Tr lượt xem • 7 tháng trước</small>
+                    </p>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="https://i.ytimg.com/vi/KhTCatAKVpk/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAdkl_QLpiJLob4dA_g8AKzcShD-g" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <div class="image-vid">
+                        <img src="https://yt3.ggpht.com/ytc/AKedOLTS2_azBscJod07mZBQaEP8ynpc_bi9fA_7iRw6=s88-c-k-c0x00ffffff-no-rj" alt="">
+                    </div>
+                  <p class="card-text">JustaTee - Đã Lỡ Yêu Em Nhiều (Official MV)
+                    <br>
+                    <span>JustaTeeMusic</span> <br>
+                    <small>153&nbsp;Tr lượt xem • 3 năm trước</small>
+                  </p>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="https://i.ytimg.com/vi/d44UTUSTYKU/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBjjc1R7IzgGOwTuggfjbG4k1t65A" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <div class="image-vid">
+                        <img src="https://yt3.ggpht.com/ytc/AKedOLQ-pO1p4Djrp5KaiawzzlBYUrKWBA-ZKteptNztQw=s88-c-k-c0x00ffffff-no-rj" alt="">
+                    </div>
+                  <p class="card-text">SOOBIN X SLIMV - THE PLAYAH (Special Performa...
+                    <br>
+                    <span>SOOBIN Official</span> <br>
+                    <small>33&nbsp;Tr lượt xem • 5 tháng trước</small>
+                  </p>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="https://i.ytimg.com/vi/ErhGuwNgrmw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA023ne2pHZdWnlNJBwjWTAdc8VIw" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <div class="image-vid">
+                        <img src="https://yt3.ggpht.com/ytc/AKedOLQUTCVb5f5qA8l-tqhkkOI_I4zJQ2Wu-6wTUyJTYg=s176-c-k-c0x00ffffff-no-rj-mo" alt="">
+                    </div>
+                  <p class="card-text">NẮNG ẤM XA DẦN (ONIONN REMIX) | SƠN TÙNG M-TP ...
+                    <br>
+                    <span>Sơn Tùng M-TP Official <i class="bi bi-music-note"></i></span> <br>
+                    <small>18&nbsp;Tr lượt xem • 2 năm trước</small>
+                  </p>
+                </div>
+              </div>
+        </div>
+    </div>
+    <script>
+        window.addEventListener('mousedown', function(event) {
+        var input = document.getElementById("input");
+        var textInput = document.getElementById("text-input");
+        if (event.target === textInput) {
+            input.classList.add("active");
+        } else if (event.target != textInput) {
+            input.classList.remove("active");
+        }
+        });
+        
+        function onSideNav() {
+          document.getElementById("sideNav").style.display = "block";
+          document.getElementById("content-sideNav").style.animation = "appear 0.5s"
+        }
+
+        function offSideNav() {
+          setTimeout(() => { document.getElementById("sideNav").style.display = "none";}, 500);
+          document.getElementById("content-sideNav").style.animation = "disappear 0.5s"
+        }
+
+        var avt = document.getElementById("avt");
+        var avtContent = document.getElementById("avt-content");
+        avtContent.style.right = "-400px";
+        avt.onclick = function(){
+            if(avtContent.style.right  == "-400px"){
+              avtContent.style.right = 75+"px";
+            }else{
+              avtContent.style.right = "-400px";
+            }
+        }
+    </script>
+</body>
+</html>
